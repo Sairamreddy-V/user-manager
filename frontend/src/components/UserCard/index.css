@@ -1,0 +1,69 @@
+.li-container{
+    @media(min-width:512px){
+        width:180px;
+        height: 200px;
+    };
+    @media(max-width:512px){
+        width:290px;
+        height:170px;
+        flex-shrink: 1;
+    };
+    list-style-type: none;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 7px;
+    background-color:#3f444d;
+    padding: 10px;
+}
+.name-container{
+    display: flex;
+    @media(min-width:512px){
+        flex-direction: column;
+    }@media(max-width:512px){
+        flex-direction: row;
+    }
+}
+.icon{
+    @media (min-width:512px) {
+        align-self: center;
+        margin-bottom: 5px;
+        height: 70px;
+        width: 70px;
+    }
+    color:#8b8a90;
+    font-size: 30px;
+    @media (max-width:512px) {
+        margin-right: 15px;
+        height: 90px;
+        width: 90px;
+    }
+    
+}
+.name{
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    align-self: center;
+    text-align: center;
+    @media(max-width:512px){
+        font-size: 20px;
+    }
+}
+.contact-num{
+    color:grey;
+    font-size: 14px;
+    font-weight: bold;
+    @media(max-width:512px){
+        font-size: 18px;
+    }
+}
+
+.link-el{
+    text-decoration: none;
+    @media (max-width:512px) {
+        align-self: center;
+    }
+    @media (min-width:512px) {
+        flex-grow: 1;
+    }
+}

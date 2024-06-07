@@ -1,0 +1,31 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3f444d;
+    @media(min-width:512px){
+        padding: 10px 25px 10px 65px;
+    }
+    @media(max-width:512px){
+        padding: 5px 5px 5px 25px;
+    }
+}
+.nav-h1{
+    color:#ffffff;
+    font-size: 16px;
+    font-weight: bold;
+}
+.nav-ul{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+.link-item{
+    text-decoration: none;
+}
+.li-item{
+    color:#898b8c;
+    font-size: 14px;
+    margin-right: 10px;
+    font-weight: bold;
+}
