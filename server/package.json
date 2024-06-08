@@ -1,7 +1,7 @@
 {
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "if [ -f yarn.lock ]; then yarn start; else npm start; fi"
+    "start": "node app.js"
   },
   "dependencies": {
     "cors": "^2.8.5",
