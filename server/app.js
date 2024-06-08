@@ -20,7 +20,7 @@ const initializingDbandServerConnection= async()=>{
                 driver:sqlite3.Database,
             }
         )
-        app.listen(3000,()=>{
+        app.listen(5000,()=>{
             console.log(`server running at port 3000...`)
         })
     }catch(error){
