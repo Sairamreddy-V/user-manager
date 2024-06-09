@@ -12,6 +12,7 @@ const AddUser=()=>{
     });
     const [error,setError]=useState("")
     const [success,setSuccessMsg]=useState("")
+    const url=`https://user-manager-q8fs.onrender.com`
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -29,7 +30,7 @@ const AddUser=()=>{
             setError('Contact number must be 10 digits');
         } else {
             try {
-                const response = await axios.post('http://localhost:3000/user', formData);
+                const response = await axios.post(`${url}/user`, formData);
                 const data= await response.data
                 setSuccessMsg(data);
             } catch (error) {

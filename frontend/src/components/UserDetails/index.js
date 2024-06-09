@@ -15,11 +15,11 @@ const UserDetails=()=>{
     const [closeButton,setButton]=useState(false)
     const navigate=useNavigate()
     const {id}=useParams()
-    console.log(id)
+    const url=`https://user-manager-q8fs.onrender.com`
 
     const getUserDetails=async()=>{
         try{
-            const response=await axios.get(`http://localhost:3000/user/${id}`)
+            const response=await axios.get(`${url}/user/${id}`)
             if(response.status===200){
                 const data= await response.data 
                 const newData={
@@ -55,7 +55,7 @@ const UserDetails=()=>{
 
     const onDeleteClick= async ()=>{
         try{
-            const resposne= await axios.delete(`http://localhost:3000/delete-user/${id}`)
+            const resposne= await axios.delete(`${url}/delete-user/${id}`)
             if(resposne.status===200){
                 const data=resposne.data 
                 setTimeout(() => {

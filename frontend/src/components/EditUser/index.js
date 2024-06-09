@@ -13,6 +13,7 @@ const EditUser=(props)=>{
     });
     const [error,setError]=useState("")
     const [success,setSuccessMsg]=useState("")
+    const url=`https://user-manager-q8fs.onrender.com`
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -25,7 +26,7 @@ const EditUser=(props)=>{
 
     const getUserDetails=async()=>{
         try{
-            const response=await axios.get(`http://localhost:3000/user/${id}`)
+            const response=await axios.get(`${url}/user/${id}`)
             if(response.status===200){
                 const data= await response.data 
                 const newData={
@@ -44,6 +45,8 @@ const EditUser=(props)=>{
         }
     }
 
+    
+
     useEffect(()=>{
         getUserDetails()
     },[])
@@ -56,7 +59,7 @@ const EditUser=(props)=>{
             setError('Contact number must be 10 digits');
         } else {
             try {
-                const response = await axios.put(`http://localhost:3000/edit-user/${id}`, formData);
+                const response = await axios.put(`${url}/${id}`, formData);
                 const data= await response.data
                 setSuccessMsg(data);
             } catch (error) {

@@ -13,13 +13,14 @@ const Users=()=>{
     const [search,setSearch]=useState("")
     const [page,setPage]=useState(1)
     const navigate=useNavigate()
+    const url=`https://user-manager-q8fs.onrender.com`
 
     
 
     const getAllUsers = useCallback(async (search, page) => {
         setLoadingStatus(true);
         try {
-            const response = await axios.get(`http://localhost:3000/users?search=${search}&page=${page}`);
+            const response = await axios.get(`${url}/users?search=${search}&page=${page}`);
             if (response.status === 200) {
                 const data = response.data;
                 if (data.result.length >= 1) {
