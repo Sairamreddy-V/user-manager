@@ -13,7 +13,6 @@
 }
 .profile-details-container{
     display: flex;
-    align-self:center;
     @media (min-width:512px) {
         flex-direction: row;
     }
