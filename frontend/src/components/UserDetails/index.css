@@ -12,14 +12,15 @@
     padding: 10px;
 }
 .profile-details-container{
+    display: flex;
+    align-self:center;
     @media (min-width:512px) {
-        display: flex;
         flex-direction: row;
     }
     @media (max-width:512px) {
-        display: flex;
         flex-direction: column;
     }
+    
 }
 .profile-icon{
     @media (min-width:512px) {
